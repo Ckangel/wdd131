@@ -1,0 +1,115 @@
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.navigation {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: space-between; /* Evenly distribute items across the width */
+    padding: 0 40px; /* Optional: Add some padding on the left and right */
+}
+
+.navigation a {
+    display: flex;
+    display: block;
+    color: #eee;
+    background-color: #042f61;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 15px; /* Add some padding for better clickability */
+}
+
+/* Optional: Add hover effect for links */
+.navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+}
+
+/* Flex container for main content and aside */
+.container {
+    display: flex; /* Enable flexbox layout */
+    margin: 20px; /* Margin around the container */
+    justify-content: space-around;  /* Even spacing between items */
+    flex-wrap: wrap;                /* Allow wrapping to next line if needed */
+}
+
+/* Main content styles */
+main {
+    padding: 10px; /* Padding inside the main section */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+/* Aside styles */
+aside {
+    flex: 1
+    padding: 20px; /* Padding inside the aside section */
+    background-color: #e9ecef; /* Slightly darker background color */
+}
+
+/* Card styles */
+.card {
+    flex: 2
+    margin-bottom: 20px; /* Space between cards */
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design to stack columns on small screens */
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column; /* Stack columns vertically on small screens */
+    }
+
+/* General styling for headings and paragraphs within cards */
+h2 {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: rgb(19, 6, 138);
+    padding: 20px 10px;
+}
+
+card img {
+    float: right;
+    width: 200px;
+    height: auto;
+    margin-left: 10px;
+}
+
+aside img {
+    float: left;
+    width: 200px;
+    height: auto;
+    margin-left: 10px;
+}
+
+/* Specific styling for web dev section (if needed) */
+.card1 {
+    margin-bottom: 20px; /* Space between cards in this section */
+    background-color: #f9f9f9; /* Light grey background for contrast */
+    border-left: 5px solid #4a90e2; /* Blue left border for emphasis */
+}
+
+/* Footer styles */
+footer {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
