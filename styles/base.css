@@ -64,15 +64,15 @@ nav a {
 /* Main content styles */
 .container {
     display: flex;
-    flex: 2 1 100%;
+    flex: 1 1 100%;
 }
 
 /* Card styles */
 card1 {
-    flex: 2;
+    flex: 1;
     padding: 10px;
     background-color: gray;
-    border: 1px solid #cccccc;
+    border: 1px solid #042f61;
     border-radius: 15px;
 }
 
@@ -80,6 +80,7 @@ card1 {
     flex: 1;
     padding: 20px;
     background-color: white;
+    border: 1px solid #042f61;
     border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
