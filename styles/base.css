@@ -67,13 +67,15 @@ nav a {
     flex: 1 1 100%;
 }
 
-/* Card styles */
+/* Card styles and Flex columns */
 card1 {
     flex: 1;
-    padding: 10px;
+    padding: 20px;
     background-color: gray;
     border: 1px solid #042f61;
-    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;  /* Even spacing between items */
+    flex-wrap: wrap;       
 }
 
 .card2 {
@@ -81,8 +83,9 @@ card1 {
     padding: 20px;
     background-color: white;
     border: 1px solid #042f61;
-    border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;  /* Even spacing between items */
+    flex-wrap: wrap;       
 }
 
 /* General styling for headings and paragraphs within cards */
