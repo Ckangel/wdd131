@@ -14,40 +14,34 @@
 </head>
 
 <body>
-   <header>
-    <h1>WDD 131 : Dynamic Web Fundamentals - Charles K. Ajeigbe</h1>
-    <nav class="navigation">
-      <a href="https://www.linkedin.com/in/charles-ajeigbe-0a41b43/" target="_blank">LinkedIn</a>
-      <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
-      <a href="#">Final Project</a> 
+ 
+<header>
+<h1>WDD 131 : Dynamic Web Fundamentals - <span class="highlight">Charles K. Ajeigbe</span></h1>
+</header>
+    <nav>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/charles-ajeigbe-0a41b43/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a></li>
+        <li><a href="#">Final Project</a></li> 
+      </ul>
     </nav>
-   </header>
-
-   <main>
-      <section class="card">
-      <h2>About Me</h2>
-      <img src="images/profile.jpg" alt="Charles K. Ajeigbe's photo" width="200">
-      <p>Akwaaba! That is the greeting to welcome you to Ghana. My name is Charles Kingsley Ajeigbe, from the harbor city, Tema, Ghana. I hold some fulfilling callings in my Church that keep me very busy. I am a Ward Temple and Family History Leader, Ward Self Reliance group facilitator for Starting And Growing My Business course, Stake Communications Director, Executive Secretary to 2 Coordinating Councils - Accra East and Accra North, and serve with my wife as BYU Pathway Missionaries. I love classical and country music, driving and playing chess. I am a mushroom farmer too.</p>
-     </section>
   
-      <h3>Tema, Ghana</h3>
-      <figure class="card">
-      </figure>
-      <img src="images/ghana.jpeg" alt="Ghana Flag" width="200">
-      <figcaption>National Flag of the Republic of Ghana
-          <p>Ghana's history dates back to at least 10,000 BCE. The country was named after a medieval trading empire that was located northwest of modern-day Ghana until the 13th century. In the 15th century, Ghana established direct sea trade with Europe, and the Portuguese, Dutch, and British built forts and castles along the coast to protect their trade interests. Ghana became the first sub-Saharan African country to gain independence from Britain in 1957.</p>
-          <p><strong>Attractions:</strong></p>
-          <ul>            
-            <li><strong>Beaches:</strong> Ghana's coastline is over 500 kilometers long and includes popular beaches like Kokrobite, Labadi, and Cape Coast.</li>
-            <li><strong>Forests:</strong> Ghana has lush forests with a suspended walkway that offers views of the rainforest and wildlife.</li>
-            <li><strong>Castles and forts:</strong> Ghana's coastline is dotted with forts and castles built by European powers during the colonial era, including Cape Coast Castle and Elmina Castle.</li>
-            <li><strong>Cuisine:</strong> Ghana's cuisine is a blend of local ingredients and spices, with popular dishes including jollof rice, banku, fufu, and waakye.</li>
-          </ul>
-        </figcaption>
-   </main>
+   <main>
 
-    <aside>
+    <div class="container">
+      <div class="card1">
+        <h2>About Me</h2>
+        <img src="images/profile.jpg" alt="Charles K. Ajeigbe's photo" width="150">
+        <p>Akwaaba! That is the greeting to welcome you to Ghana. My name is Charles Kingsley Ajeigbe, from the harbor city, Tema, Ghana. I hold some fulfilling callings in my Church that keep me very busy. I am a Ward Temple and Family History Leader, Ward Self Reliance group facilitator for Starting And Growing My Business course, Stake Communications Director, Executive Secretary to 2 Coordinating Councils - Accra East and Accra North, and serve with my wife as BYU Pathway Missionaries. I love classical and country music, driving and playing chess. I am a mushroom farmer too.</p>
+           
+        <h3>Tema, Ghana</h3>
+        <img src="images/ghana.jpeg" alt="Ghana Flag" width="150">
+        <figcaption>National Flag of the Republic of Ghana</figcaption>
+          <p>Ghana's history dates back to at least 10,000 BCE. The country was named after a medieval trading empire that was located northwest of modern-day Ghana until the 13th century. In the 15th century, Ghana established direct sea trade with Europe, and the Portuguese, Dutch, and British built forts and castles along the coast to protect their trade interests. Ghana became the first sub-Saharan African country to gain independence from Britain in 1957.</p>
+      </div>
+
+      <div class="card2">
         <h2>Web Dev Resources</h2>
         <ul class="links">
             <li><a href="https://resourcecenter.byupathway.edu/" target="_blank">BYU Pathway Resource Center</a></li>
@@ -56,14 +50,18 @@
             <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
             <li><a href="https://coursiv.io/en/" target="_blank">Coursiv AI</a></li>
         </ul>
-    </aside>
-  </body>
-  </html>
-  
+      </div>
+    </div>
+   </main>
+
   <footer>
     <p>&copy;<span id="currentyear"></span> 💕 Charles Kingsley Ajeigbe 💕 Ghana</p>
-    <p id="lastModified"></p>
+    <p id="lastModified">
+      <span class="highlight">Last Modified: </span>
+      <span class="highlight" id="currentDateTime"></span>
+    </p>
   </footer>
-
+</body>
+</html>
   
 

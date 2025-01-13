@@ -1,115 +1,128 @@
-/* Base styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
+|* {
     margin: 0;
     padding: 0;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
+/* mobile *******************/
 header {
     background-color: #4a90e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    padding: 20px;
+    padding: 5px;
+    border: 1px solid rgb(0 0 0 / 0.1);
     text-align: center;
 }
 
-.navigation {
-    display: flex;
-    align-items: center; /* Align items vertically centered */
-    justify-content: space-between; /* Evenly distribute items across the width */
-    padding: 0 40px; /* Optional: Add some padding on the left and right */
+.highlight {
+    color: yellow; /* Set font color to yellow */
 }
 
-.navigation a {
+h1 {
+    font-size: 1.5rem;
+}
+
+nav {
+    background-color: black;
+}
+
+nav ul {
+    list-style-type: none;
     display: flex;
+}
+
+nav ul li {
+    flex: 1 1 100%;
+}
+
+nav a {
     display: block;
     color: #eee;
     background-color: #042f61;
-    padding: 0.75rem;
     text-decoration: none;
     text-align: center;
-    padding: 10px 15px; /* Add some padding for better clickability */
+    padding: 1rem; 
+    margin: 0 auto;
 }
 
 /* Optional: Add hover effect for links */
-.navigation a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    text-decoration: overline;
 }
 
-/* Flex container for main content and aside */
-.container {
-    display: flex; /* Enable flexbox layout */
-    margin: 20px; /* Margin around the container */
-    justify-content: space-around;  /* Even spacing between items */
-    flex-wrap: wrap;                /* Allow wrapping to next line if needed */
+.active {
+    color: yellow;
 }
 
 /* Main content styles */
-main {
-    padding: 10px; /* Padding inside the main section */
-    background-color: #f9f9f9; /* Light background color */
-}
-
-/* Aside styles */
-aside {
-    flex: 1
-    padding: 20px; /* Padding inside the aside section */
-    background-color: #e9ecef; /* Slightly darker background color */
+.container {
+    display: flex;
+    flex: 2 1 100%;
 }
 
 /* Card styles */
-.card {
-    flex: 2
-    margin-bottom: 20px; /* Space between cards */
+card1 {
+    flex: 2;
     padding: 10px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: gray;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
 }
 
-/* Responsive design to stack columns on small screens */
-@media (max-width: 600px) {
-    .flex-container {
-        flex-direction: column; /* Stack columns vertically on small screens */
-    }
+.card2 {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
 /* General styling for headings and paragraphs within cards */
 h2 {
     text-align: center;
-    background-color: var(--primary-color);
-    color: rgb(19, 6, 138);
-    padding: 20px 10px;
-}
-
-card img {
-    float: right;
-    width: 200px;
-    height: auto;
-    margin-left: 10px;
-}
-
-aside img {
-    float: left;
-    width: 200px;
-    height: auto;
-    margin-left: 10px;
-}
-
-/* Specific styling for web dev section (if needed) */
-.card1 {
-    margin-bottom: 20px; /* Space between cards in this section */
-    background-color: #f9f9f9; /* Light grey background for contrast */
-    border-left: 5px solid #4a90e2; /* Blue left border for emphasis */
-}
-
-/* Footer styles */
-footer {
     background-color: #4a90e2;
-    color: white;
+    color: rgb(19, 6, 138);
+    padding: 20px;
+}
+
+.card1 img {
+    float: right;
+    margin-left: 15px;
+}
+
+.card1 h2, h3 {
+    text-align: center;
+}
+
+.card1 p {
+    text-align: justify;
+}
+
+.card1 img:last-of-type {
+    float: left;
+    margin-right: 15px;
+}
+
+.card1::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer {
+    background-color: #4a90e2; 
+    color: white; /* Default text color */
     padding: 10px;
     text-align: center;
+}
+
+.highlight {
+    color: yellow; 
 }

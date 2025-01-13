@@ -2,6 +2,18 @@
 const currentYear = new Date().getFullYear();
 document.getElementById('currentyear').textContent = currentYear;
 
-// Get last modified date
-const lastModifiedDate = new Date(document.lastModified);
-document.getElementById('lastModified').textContent = `Last Modified: ${lastModifiedDate.toLocaleDateString()}`;
+// Get current date and time
+const now = new Date();
+const options = { 
+    year: 'numeric', 
+    month: 'numeric', 
+    day: 'numeric', 
+    hour: '2-digit', 
+    minute: '2-digit', 
+    second: '2-digit',
+    hour12: false // Use 24-hour format; set to true for 12-hour format
+};
+
+// Display the formatted date and time
+document.getElementById("currentDateTime").textContent = now.toLocaleString('en-US', options);
+
