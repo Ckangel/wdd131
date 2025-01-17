@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap');
+
 /* Base styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -6,88 +9,84 @@ body {
     box-sizing: border-box;
 }
 
+h1 {
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: 700;
+    font-style: italic; /* Cursive effect */
+    text-transform: uppercase;
+}
+
 /* mobile *******************/
 header {
     background-color: #4a90e2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
     padding: 20px;
     text-align: center;
 }
 
-header,
-main {
-	margin: 0 auto;
-}
-
-h1 {
-	font-size: 2rem;
-}
-
-nav {
-	background-color: #36454f;
-	margin: 0 auto;
-}
-
-nav ul {
-    display: flex;
-	list-style-type: none;
-}
-
-nav ul li {
-    flex: 1 1 100%;
-}
-
-nav a {
-	display: flex;
-	color: #fff;
-	text-align: center;
-	padding: 1rem;
-	text-decoration: none;
-}
-
-nav a:hover {
-	text-decoration:overline;
-}
-
-.active {
-	color: magenta;
+.heading {
+    color: white;
+    margin: 0;
 }
 
 .highlight {
     color: yellow; 
 }
 
-/* Larger Views ******************************/
-@media (min-width: 640px) {
-	nav ul {
-		display: flex;
-	}
-	nav ul li {
-		flex: 1 1 100%;
-	}
+/* Styles for nav */
+nav {
+    background-color: #000000;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*  Styles for nav links */
+nav a {
+	color: white;
+	text-align: center;
+	padding: 10px 15px;
+	text-decoration: none;
+    font-weight: 700;
+    font-size: large;
+}
+
+/* Hover effects for links */
+nav a:hover {
+	text-decoration: underline;
+}
+
+/*  Active link style */
+.active {
+    background-color: bisque;
+	color: magenta;
+}
+
+/* General styles for Main layout */
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px;
 }
 
 /* Card styles and Flex columns */
-.card {
-    display: flex;
-    margin: 20px;
-    background-color: gray;
-    border: 1px solid #042f61;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.about {
+.card1 {
     flex: 2;
-    padding: 20px;    
+    margin-right: 20px;
+    border: 1px solid #042f61;
+    border-radius: 15px;
 }
 
-.about-country {
-    flex: 1;
-    border-left: 1px solid #ccc;
-    padding: 20px;
+.card2 {
+    flex: 1;   
+    border: 1px solid #042f61;
+    border-radius: 15px;
 }
 
 /* General styling for headings and paragraphs within cards */
@@ -95,40 +94,90 @@ h2 {
     text-align: center;
     background-color: #4a90e2;
     color: rgb(19, 6, 138);
-    padding: 20px;
 }
 
-/* Image styles */
-.profile-image {
+h3 {
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* About Me section styles */
+.about-me {
+    overflow: hidden;
+}
+
+.about-me img {
     float: right;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
-.flag-image {
+.about-me p {
+    text-align: left;
+    position: relative;
+    padding-left: 5px;
+    font-weight: 700;
+}
+
+.about-me p::after {
+    content: ";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: grey;
+    margin: 10px;
+}
+
+/* Country details section styles */
+.country-details {
+    overflow: hidden;
+}
+
+.country-details img {
     float: left;
-    margin-right: 15px;
+    margin-right: 0 10px;
 }
 
-/* Clearfix for card to contain floated elements */
-.card::after {
-    content: "";
-    display: table;
-    clear: both;
+.country-details p {
+    text-align: right;
+    position: relative;
+    padding-right: 5px;
+    font-weight: 700;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
-    .card {
-        flex-direction: column; /* Stack columns vertically on small screens */
+.country-details p::after {
+    content: ";
+    display: block;
+    width: 70%;
+    height: 2px;
+    background-color: grey;
+    margin: 10px auto 0;
+    padding
+}
+
+/* List styles in card2 */
+.links {
+    list-style-type: none;
+    padding-top: 100px;
+    list-style-type: disc; 
+    padding-left: 40px; 
+    font-weight: 700;
+}
+  
+.links li {
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.links a {
+    text-decoration: none;
 }
 
 footer {
     background-color: #4a90e2; 
-    color: white; /* Default text color */
-    padding: 10px;
+    color: white;
+    padding: 10px 20px;
+    justify-content: center;
     text-align: center;
-}
-
-.highlight {
-    color: yellow; 
+    font-weight: 700;
+    font-size: large;
 }
