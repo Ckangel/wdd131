@@ -1,11 +1,9 @@
-|* {
-    margin: 0;
-    padding: 0;
-}
-
 /* Base styles */
 body {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* mobile *******************/
@@ -15,26 +13,27 @@ header {
     align-items: center;
     justify-content: center;
     color: white;
-    padding: 5px;
-    border: 1px solid rgb(0 0 0 / 0.1);
+    padding: 20px;
     text-align: center;
 }
 
-.highlight {
-    color: yellow; /* Set font color to yellow */
+header,
+main {
+	margin: 0 auto;
 }
 
 h1 {
-    font-size: 1.5rem;
+	font-size: 2rem;
 }
 
 nav {
-    background-color: black;
+	background-color: #36454f;
+	margin: 0 auto;
 }
 
 nav ul {
-    list-style-type: none;
     display: flex;
+	list-style-type: none;
 }
 
 nav ul li {
@@ -42,50 +41,53 @@ nav ul li {
 }
 
 nav a {
-    display: block;
-    color: #eee;
-    background-color: #042f61;
-    text-decoration: none;
-    text-align: center;
-    padding: 1rem; 
-    margin: 0 auto;
+	display: flex;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
 }
 
-/* Optional: Add hover effect for links */
-.nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
-    text-decoration: overline;
+nav a:hover {
+	text-decoration:overline;
 }
 
 .active {
-    color: yellow;
+	color: magenta;
 }
 
-/* Main content styles */
-.container {
-    display: flex;
-    flex: 1 1 100%;
+.highlight {
+    color: yellow; 
+}
+
+/* Larger Views ******************************/
+@media (min-width: 640px) {
+	nav ul {
+		display: flex;
+	}
+	nav ul li {
+		flex: 1 1 100%;
+	}
 }
 
 /* Card styles and Flex columns */
-card1 {
-    flex: 1;
-    padding: 20px;
+.card {
+    display: flex;
+    margin: 20px;
     background-color: gray;
     border: 1px solid #042f61;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    justify-content: space-around;  /* Even spacing between items */
-    flex-wrap: wrap;       
 }
 
-.card2 {
+.about {
+    flex: 2;
+    padding: 20px;    
+}
+
+.about-country {
     flex: 1;
+    border-left: 1px solid #ccc;
     padding: 20px;
-    background-color: white;
-    border: 1px solid #042f61;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    justify-content: space-around;  /* Even spacing between items */
-    flex-wrap: wrap;       
 }
 
 /* General styling for headings and paragraphs within cards */
@@ -96,28 +98,28 @@ h2 {
     padding: 20px;
 }
 
-.card1 img {
+/* Image styles */
+.profile-image {
     float: right;
     margin-left: 15px;
 }
 
-.card1 h2, h3 {
-    text-align: center;
-}
-
-.card1 p {
-    text-align: justify;
-}
-
-.card1 img:last-of-type {
+.flag-image {
     float: left;
     margin-right: 15px;
 }
 
-.card1::after {
+/* Clearfix for card to contain floated elements */
+.card::after {
     content: "";
     display: table;
     clear: both;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column; /* Stack columns vertically on small screens */
 }
 
 footer {
