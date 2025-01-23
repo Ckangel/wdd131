@@ -6,9 +6,13 @@ header {
     background-color: #333;
 }
 
+/* General styles for Main layout */
 main {
     main-width: 800px;
     margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+    padding: 20px;    
 }
 
 nav {

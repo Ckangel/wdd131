@@ -12,3 +12,7 @@ const options = {
 
 // Display the formatted date and time
 document.getElementById("currentDateTime").textContent = now.toLocaleString('en-US', options);
+
+
+// Set the year in the copyright notice
+document.getElementById("year").textContent = now.getFullYear();
