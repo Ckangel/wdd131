@@ -68,7 +68,7 @@ nav a:hover {
 
 /* General styles for Main layout */
 main {
-    main-width: 800px;
+    min-width: 800px;
     margin: 0 auto;
     max-width: 1200px;
     width: 90%;

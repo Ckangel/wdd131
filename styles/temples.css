@@ -8,11 +8,11 @@ header {
 
 /* General styles for Main layout */
 main {
-    main-width: 800px;
     margin: 0 auto;
     max-width: 1200px;
     width: 90%;
-    padding: 20px;    
+    padding: 20px; 
+    min-width: 800px;   
 }
 
 nav {
@@ -30,12 +30,12 @@ nav {
     margin-right: 20px;
 }
 
-#nav ul {
+.nav ul {
     display: flex;
     text-transform: uppercase;
 }
 
-nav ul a {
+.nav ul a {
     display: flex;
     padding: 2opx;
     display: block;
@@ -99,7 +99,7 @@ nav ul a {
 }
 
 fig-caption {
-
+    align-content: center;
 }
 
 .footer {
