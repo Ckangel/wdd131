@@ -10,17 +10,15 @@
 <link rel="stylesheet" href="styles/temples-large.css"> 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <script src="scripts/temples.js" defer></script>
 </head>
-
 <body>
-
   <header>
     <h1>LDS Temples Album</h1>
-    <div></div>
     <nav>
-      <ul>
+      <input type="checkbox" class="menu-toggle" id="menuToggle">
+      <label for="menuToggle" class="hamburger">&#9776;</label>
+      <ul class="nav-list">
         <li><a href="#" target="_blank">Home</a></li>
         <li><a href="#" target="_blank">Old</a></li>
         <li><a href="#" target="_blank">New</a></li>
@@ -34,39 +32,39 @@
           <h2 class="home_title">Home</h2>
           <div class="grid-container">
             <figure>
-              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 1" width="250" height="167">
+              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 1" loading="lazy">
               <figcaption>The Accra Ghana Temple</figcaption>
             </figure>
             <figure>
-              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 1" width="250" height="167">
+              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 2" loading="lazy">
+            <figcaption>The Accra Ghana Temple</figcaption>
+            </figure>
+            <figure>
+              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 3" loading="lazy">
               <figcaption>The Accra Ghana Temple</figcaption>
             </figure>
             <figure>
-              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 1" width="250" height="167">
+              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 4" loading="lazy">
               <figcaption>The Accra Ghana Temple</figcaption>
             </figure>
             <figure>
-              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 1" width="250" height="167">
+              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 5" loading="lazy">
               <figcaption>The Accra Ghana Temple</figcaption>
             </figure>
             <figure>
-              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 1" width="250" height="167">
+              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 6" loading="lazy">
               <figcaption>The Accra Ghana Temple</figcaption>
             </figure>
             <figure>
-              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 1" width="250" height="167">
+              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 7" loading="lazy">
               <figcaption>The Accra Ghana Temple</figcaption>
             </figure>
             <figure>
-              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 1" width="250" height="167">
+              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 8" loading="lazy">
               <figcaption>The Accra Ghana Temple</figcaption>
             </figure>
             <figure>
-              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 1" width="250" height="167">
-              <figcaption>The Accra Ghana Temple</figcaption>
-            </figure>
-            <figure>
-              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 1" width="250" height="167">
+              <img src="images/ghana-accra-temple.jpg" alt="Accra Ghana Temple 9" loading="lazy">
               <figcaption>The Accra Ghana Temple</figcaption>
             </figure>
           </div>
@@ -74,8 +72,7 @@
   </main>
   <footer>
     <p>&copy;<span id="year"></span> 💕 Charles Kingsley Ajeigbe 💕 Ghana 💕</p>
-    <p id="lastModified">
-      <span id="currentDateTime"></span></p>
+    <p id="lastModified">Last Modified: <span id="currentDateTime"></span></p>
   </footer>
   </body>
   </html>     

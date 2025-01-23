@@ -2,7 +2,7 @@
 const now = new Date();
 const options = { 
     year: 'numeric', 
-    month: 'numeric', 
+    month: 'long', 
     day: 'numeric', 
     hour: '2-digit', 
     minute: '2-digit', 
@@ -11,8 +11,7 @@ const options = {
 };
 
 // Display the formatted date and time
-document.getElementById("currentDateTime").textContent = now.toLocaleString('en-US', options);
-
+document.getElementById("currentDateTime").textContent = now.toLocaleDateString('en-US', options);
 
 // Set the year in the copyright notice
 document.getElementById("year").textContent = now.getFullYear();

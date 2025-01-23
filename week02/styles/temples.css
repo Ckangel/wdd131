@@ -1,9 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    align-items: center;
+}
+
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
 }
 
 /* General styles for Main layout */
@@ -12,7 +26,6 @@ main {
     max-width: 1200px;
     width: 90%;
     padding: 20px; 
-    min-width: 800px;   
 }
 
 nav {
@@ -27,33 +40,22 @@ nav {
 .hamburger {
     cursor: pointer;
     font-size: 2em;
-    margin-right: 20px;
-}
-
-.nav ul {
-    display: flex;
-    text-transform: uppercase;
-}
-
-.nav ul a {
-    display: flex;
-    padding: 2opx;
-    display: block;
-    text-decoration: none;
-    color: #333;
-    transition: background 0.3s linear;
 }
 
 .nav-list {
     display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .nav-list a {
+    padding: 10px;
     text-decoration: none;
-    color: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none; /* Removes bullets */
+    margin: 0;            /* Removes default margin */
+    padding: 0;           /* Removes default padding */
 }
 
 /* Hamburger menu styles */
@@ -66,25 +68,31 @@ nav {
     .nav-list {
         display: none;
         width: 100%;
-        background-color: #f8f8f8;
+        background-color: #444;
         position: absolute;
         top: 60px;
         left: 0;
-        padding-top: 10px;
         z-index: 1000;
+        padding-top: 10px;
+        text-align: center;        
     }
 
     .nav-list li {
         margin-left: 0;
         text-align: center;
+        padding: 10px;
     }
+}
+
+.home-title {
+    text-align: center;
+    font-weight: 700;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 3, 1fr));
-    grid-template-rows: auto;
-    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
     margin: 0 auto;
 }
 
@@ -94,18 +102,5 @@ nav {
 
 .grid-container img {
     width: 100%; 
-    height: auto; 
-    display: block; 
+    height: auto;  
 }
-
-fig-caption {
-    align-content: center;
-}
-
-.footer {
-    align-items: center;
-    padding: 10px;
-    background-color: #333;
-}
-
-
