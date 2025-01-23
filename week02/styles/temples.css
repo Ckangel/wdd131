@@ -20,10 +20,15 @@ header {
     justify-content: space-between;
 }
 
+footer {
+    justify-content: center;
+    text-align: center;
+}
+
 /* General styles for Main layout */
 main {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1000px;
     width: 90%;
     padding: 20px; 
 }
@@ -84,18 +89,19 @@ nav ul {
     }
 }
 
-.home-title {
+h2 {
     text-align: center;
     font-weight: 700;
+    justify-content: center;
+    text-align: center;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
-    margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Fixed grid template */
+        gap: 25px; /* Use gap instead of grid-gap */
 }
-
+    
 .grid-container figure {
     margin: 0; 
 }
