@@ -15,3 +15,21 @@ document.getElementById("currentDateTime").textContent = now.toLocaleDateString(
 
 // Set the year in the copyright notice
 document.getElementById("year").textContent = now.getFullYear();
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('nav ul');
+
+    // Toggle the navigation menu
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('show');
+    });
+
+    // Set active class on click
+    navList.querySelectorAll('li a').forEach(link => {
+        link.addEventListener('click', function() {
+            navList.querySelectorAll('li a').forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});

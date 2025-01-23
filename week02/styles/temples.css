@@ -33,6 +33,7 @@ main {
     padding: 20px; 
 }
 
+/* General navigation styles */
 nav {
     display: flex;
     align-items: center;
@@ -58,9 +59,41 @@ nav {
 }
 
 nav ul {
-    list-style-type: none; /* Removes bullets */
-    margin: 0;            /* Removes default margin */
-    padding: 0;           /* Removes default padding */
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Active menu highlight with delay */
+nav ul li a:active {
+    background-color: rgba(255,255,255,0.5);
+    transition-delay: 5s;
+}
+
+nav ul.show {
+    display: flex;
 }
 
 /* Hamburger menu styles */
@@ -70,6 +103,11 @@ nav ul {
 }
 
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 2em;
+    }
     .nav-list {
         display: none;
         width: 100%;
