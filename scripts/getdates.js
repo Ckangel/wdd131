@@ -12,4 +12,3 @@ const options = {
 
 // Display the formatted date and time
 document.getElementById("currentDateTime").textContent = now.toLocaleString('en-US', options);
-
