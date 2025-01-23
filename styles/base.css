@@ -68,11 +68,9 @@ nav a:hover {
 
 /* General styles for Main layout */
 main {
-    min-width: 800px;
     margin: 0 auto;
-    max-width: 1200px;
-    width: 90%;
-    padding: 20px;    
+    max-width: 1200px; 
+    display: flex;
 }
 
 /* Card styles and Flex columns */
@@ -92,6 +90,7 @@ main {
 /* General styling for headings and paragraphs within cards */
 h2 {
     text-align: center;
+    padding: 0%;
     background-color: #4a90e2;
     color: rgb(19, 6, 138);
 }
