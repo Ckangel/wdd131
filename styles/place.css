@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #4CAF50; /* Green */
-    --secondary-color: #f44336; /* Red */
+    --primary-color: #6f4caf; /* Green */
+    --secondary-color: #8f7674; /* Red */
     --font-family: 'Roboto', sans-serif;
 }
 
@@ -23,8 +23,15 @@ header, footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
     width: 100%;
+}
+
+h1 {
+    font-weight: 700;
+    font-style: italic;
+    font: size 100px;
+    font-stretch: extra-expanded;
 }
 
 header h1::after, footer::after {
@@ -41,12 +48,16 @@ header h1::after, footer::after {
     max-height: 80vh;
     overflow: hidden;
     position: relative;
+    padding: 1em;
+    border-radius: 8px;
 }
 
 .hero-img img {
     width: 100%;
     height: auto;
     display: block;
+    padding: 0.3em;
+    border-radius: 8px;
 }
 
 aside {
@@ -61,11 +72,13 @@ aside {
 .table-left {
     top: 33%;
     left: 2%;
+    box-sizing: border-box;
 }
 
 .table-right {
-    top: 50%;
+    top: 55%;
     right: 2%;
+    box-sizing: content-box;
 }
 
 table {
@@ -75,10 +88,15 @@ table {
 
 th, td {
     padding: 10px;
-    text-align: center;
+    border-left: 0;
 }
 
 th {
-    background-color: goldenrod;
+    background-color: rgb(150, 32, 218);
     color: white;
+    text-align: center;
+}
+
+td {
+    text-align: left;
 }
