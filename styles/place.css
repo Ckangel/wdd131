@@ -76,9 +76,9 @@ aside {
 }
 
 .table-right {
-    top: 55%;
+    top: 58%;
     right: 2%;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 table {
