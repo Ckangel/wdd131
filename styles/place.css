@@ -22,7 +22,7 @@ header, footer {
     text-align: center;
     background-color: #4CAF50;
     color: white;
-    max-width:max-content
+    max-width: max-content;
     padding: 1rem;
     width: 100vw; 
 }
