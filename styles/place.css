@@ -1,105 +1,84 @@
-/* Root Pseudo-Class with Global Variables */
 :root {
-    --primary-color: #4caf50; /* Green */
+    --primary-color: #4CAF50; /* Green */
     --secondary-color: #f44336; /* Red */
     --font-family: 'Roboto', sans-serif;
-  }
+}
 
-body {
-    font-family: Arial, sans-serif;
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
-    background-color: #f5f5f5;
 }
 
 header, footer {
-    margin: 0;
-    text-align: center;
-    background-color: #4CAF50;
+    background-color: var(--primary-color);
     color: white;
-    max-width: max-content;
+    text-align: center;
     padding: 1rem;
-    width: 100vw; 
+    width: 100%;
 }
 
-/* Adding Decoration with ::after */
-header h1::after {
+header h1::after, footer::after {
     content: '';
     display: block;
-    width: 100%;
+    width: 50%;
     height: 2px;
     background-color: var(--secondary-color);
-    margin: 10px auto;
-  }
+    margin: 10px auto 0;
+}
 
 .hero-img {
-    position: relative;
     width: 100%;
-    height: 500px;
+    max-height: 80vh;
     overflow: hidden;
-    padding: 10px;
-    border-color: red;
+    position: relative;
 }
 
 .hero-img img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
 }
 
 aside {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.8);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
 
 .table-left {
+    top: 33%;
     left: 2%;
-    margin-top: 20vw;
 }
 
 .table-right {
+    top: 50%;
     right: 2%;
-    margin-top: 32vw;    
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    text-align: right;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
 }
 
 th {
     background-color: goldenrod;
     color: white;
-    padding: 8px;
-    text-align: center;
-}
-
-td {
-    padding: 8px;
-    border: 1px solid #ddd;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    section {
-        margin-bottom: 1rem;
-    }
 }
