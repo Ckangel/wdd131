@@ -91,5 +91,30 @@ const temples = [
       imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
+    {
+        templeName: "Accra Ghana Temple",
+        location: "Accra, Ghana",
+        dedicated: "2004, January, 11",
+        area: 17500,
+        imageUrl:
+        "https://content.churchofjesuschristtemples.org/accra-ghana-temple/photographs/"
+    },
+    {
+        templeName: "Mexico City Mexico",
+        location: "Mexico City, Mexico",
+        dedicated: "1983, December, 2",
+        area: 116642,
+        imageUrl:
+        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    },
+    {
+        templeName: "Mexico City Mexico",
+        location: "Mexico City, Mexico",
+        dedicated: "1983, December, 2",
+        area: 116642,
+        imageUrl:
+        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    },
+
     // Add more temple objects here...
   ];
