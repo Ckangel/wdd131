@@ -139,9 +139,8 @@ h2 {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: auto;    /* Fixed 3 rows */
-    gap: 10
-    px;                         /* Hide overflow if there are more items */
+    grid-template-rows: auto;    
+    gap: 10px;
 }
 
 .grid-container img {
