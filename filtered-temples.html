@@ -16,70 +16,22 @@
   <header>
     <h1>Temples Album</h1>
     <nav>
-      <input type="checkbox" class="menu-toggle" id="menuToggle">
-      <label for="menuToggle" class="hamburger">&#9776;</label>
-      <ul class="nav-list">
-        <li><a href="#" target="_blank">Home</a></li>
-        <li><a href="#" target="_blank">Old</a></li>
-        <li><a href="#" target="_blank">New</a></li>
-        <li><a href="#" target="_blank">Large</a></li>
-        <li><a href="#" target="_blank">Small</a></li>
-      </ul>        
+        <input type="checkbox" class="menu-toggle" id="menuToggle">
+        <label for="menuToggle" class="hamburger">&#9776;</label>
+        <ul class="nav-list">
+            <li><a href="#" onclick="filterTemples('all')">Home</a></li>
+            <li><a href="#" onclick="filterTemples('old')">Old</a></li>
+            <li><a href="#" onclick="filterTemples('new')">New</a></li>
+            <li><a href="#" onclick="filterTemples('large')">Large</a></li>
+            <li><a href="#" onclick="filterTemples('small')">Small</a></li>
+        </ul>        
     </nav>
-  </header> 
+  </header>
+
   <main>
       <section>
           <h2 class="home_title">Home</h2>
-          <div class="grid-container">
-            <figure>
-              <img src="" alt="#" loading="lazy">
-              <figcaption>"#"</figcaption>
-            </figure>
-            <figure>
-              <img src="" alt="#" loading="lazy">
-            <figcaption>"#"</figcaption>
-            </figure>
-            <figure>
-              <img src="" alt="#"  loading="lazy">
-              <figcaption>"#"</figcaption>
-            </figure>
-            <figure>
-              <img src="#" alt="#" loading="lazy">
-              <figcaption>"#"</figcaption>
-            </figure>
-            <figure>
-              <img src="" alt="#"  loading="lazy">
-              <figcaption>"#"</figcaption>
-            </figure>
-            <figure>
-              <img src="#"  alt="#"  loading="lazy">
-              <figcaption>"#"</figcaption>
-            </figure>
-            <figure>
-              <img src="" alt="#"  loading="lazy">
-              <figcaption>"#"</figcaption>
-            </figure>
-            <figure>
-              <img src="" alt="#"  loading="lazy">
-              <figcaption>"#"</figcaption>
-            </figure>
-            <figure>
-              <img src="" alt="#" loading="lazy">
-              <figcaption>"#"</figcaption>
-            </figure>
-            <figure>
-                <img src="" alt="#"  loading="lazy">
-                <figcaption>"#"</figcaption>
-              </figure>
-              <figure>
-                <img src="" alt="#"  loading="lazy">
-                <figcaption>"#"</figcaption>
-              </figure>
-              <figure>
-                <img src="" alt="#" loading="lazy">
-                <figcaption>"#"</figcaption>
-              </figure>
-          </div>
+          <div class="grid-container" id="photoAlbum"></div>
       </section>
   </main>
   <footer>

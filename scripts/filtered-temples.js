@@ -1,3 +1,41 @@
+    gridContainer.appendChild(item);
+
+    function filterTemples(filterType) {
+    let filteredTemples;
+
+    switch (filterType) {
+      case 'old':
+          filteredTemples = temples.filter(temple => temple.yearBuilt < 1900);
+          break;
+      case 'new':
+          filteredTemples = temples.filter(temple => temple.yearBuilt > 2000);
+          break;
+      case 'large':
+          filteredTemples = temples.filter(temple => temple.size > 90000);
+          break;
+      case 'small':
+          filteredTemples = temples.filter(temple => temple.size < 10000);
+          break;
+      case 'all':
+      default:
+          filteredTemples = temples; // Show all temples
+          break;
+    }
+
+    displayTemples(filteredTemples);
+    }
+
+    function displayTemples(temples) {
+    const templeList = document.getElementById("templeList");
+    templeList.innerHTML = ""; // Clear existing list
+
+    temples.forEach(temple => {
+      const li = document.createElement("li");
+      li.textContent = `${temple.name} - Built in ${temple.yearBuilt} - Size: ${temple.size} sq ft`;
+      templeList.appendChild(li);
+    });
+    }
+
 // Get current date and time
 const now = new Date();
 const options = { 
@@ -97,24 +135,57 @@ const temples = [
         dedicated: "2004, January, 11",
         area: 17500,
         imageUrl:
-        "https://content.churchofjesuschristtemples.org/accra-ghana-temple/photographs/"
+        "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
     },
     {
-        templeName: "Mexico City Mexico",
-        location: "Mexico City, Mexico",
-        dedicated: "1983, December, 2",
-        area: 116642,
+        templeName: "Johannesburg South Africa Temple",
+        location: "Johannesburg, South Africa",
+        dedicated: "1985, August, 24-25",
+        area: 19184,
         imageUrl:
-        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+        "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22475-main.jpg"
     },
     {
-        templeName: "Mexico City Mexico",
-        location: "Mexico City, Mexico",
-        dedicated: "1983, December, 2",
-        area: 116642,
+        templeName: "Bountiful Utah Temple",
+        location: "Bountiful, Utah, United States",
+        dedicated: "1995, January, 8-14",
+        area: 104000,
         imageUrl:
-        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+        "https://churchofjesuschristtemples.org/assets/img/temples/bountiful-utah-temple/bountiful-utah-temple-40955-main.jpg"
     },
+    {
+        templeName: "Freiberg Germany Temple",
+        location: "Freiberg, Germany",
+        dedicated: "1985, June, 28-30",
+        area: 21500,
+        imageUrl:
+        "https://churchofjesuschristtemples.org/assets/img/temples/freiberg-germany-temple/freiberg-germany-temple-16459-main.jpg"
+    },
+    {
+      templeName: "Frankfurt Germany Temple",
+      location: "Frankfurt, Germany",
+      dedicated: "1987, August, 28-30",
+      area: 32895,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/frankfurt-germany-temple/frankfurt-germany-temple-38924-main.jpg"
+    },
+    ]
 
-    // Add more temple objects here...
-  ];
+    const gridContainer = document.querySelector('.grid-container');
+    temples.forEach(temple => {
+    const item = document.createElement('div');
+    item.className = 'grid-item';
+    { name: "Temple A", yearBuilt: 1895, size: 95000 },
+    { name: "Temple B", yearBuilt: 2005, size: 120000 },
+    { name: "Temple C", yearBuilt: 1999, size: 8000 },
+    { name: "Temple D", yearBuilt: 2010, size: 15000 },
+    { name: "Temple E", yearBuilt: 1800, size: 30000 },
+    ];
+    item.innerHTML = `
+        <h3>${temple.templeName}</h3>
+        <p>Location: ${temple.location}</p>
+        <p>Dedicated: ${temple.dedicated}</p>
+        <p>Area: ${temple.area} sq ft</p>
+        <img src="${temple.imageUrl}" alt="${temple.templeName}"> 
+    `;
+    
