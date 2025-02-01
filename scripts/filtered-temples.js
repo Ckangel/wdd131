@@ -1,5 +1,4 @@
     gridContainer.appendChild(item);
-
     function filterTemples(filterType) {
     let filteredTemples;
 
@@ -175,17 +174,12 @@ const temples = [
     temples.forEach(temple => {
     const item = document.createElement('div');
     item.className = 'grid-item';
-    { name: "Temple A", yearBuilt: 1895, size: 95000 },
-    { name: "Temple B", yearBuilt: 2005, size: 120000 },
-    { name: "Temple C", yearBuilt: 1999, size: 8000 },
-    { name: "Temple D", yearBuilt: 2010, size: 15000 },
-    { name: "Temple E", yearBuilt: 1800, size: 30000 },
-    ];
     item.innerHTML = `
         <h3>${temple.templeName}</h3>
         <p>Location: ${temple.location}</p>
         <p>Dedicated: ${temple.dedicated}</p>
         <p>Area: ${temple.area} sq ft</p>
-        <img src="${temple.imageUrl}" alt="${temple.templeName}"> 
+    <img src="${temple.imageUrl}" alt="${temple.templeName}"> 
     `;
+    });
     
