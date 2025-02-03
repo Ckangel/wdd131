@@ -1,40 +1,3 @@
-    gridContainer.appendChild(item);
-    function filterTemples(filterType) {
-    let filteredTemples;
-
-    switch (filterType) {
-      case 'old':
-          filteredTemples = temples.filter(temple => temple.yearBuilt < 1900);
-          break;
-      case 'new':
-          filteredTemples = temples.filter(temple => temple.yearBuilt > 2000);
-          break;
-      case 'large':
-          filteredTemples = temples.filter(temple => temple.size > 90000);
-          break;
-      case 'small':
-          filteredTemples = temples.filter(temple => temple.size < 10000);
-          break;
-      case 'all':
-      default:
-          filteredTemples = temples; // Show all temples
-          break;
-    }
-
-    displayTemples(filteredTemples);
-    }
-
-    function displayTemples(temples) {
-    const templeList = document.getElementById("templeList");
-    templeList.innerHTML = ""; // Clear existing list
-
-    temples.forEach(temple => {
-      const li = document.createElement("li");
-      li.textContent = `${temple.name} - Built in ${temple.yearBuilt} - Size: ${temple.size} sq ft`;
-      templeList.appendChild(li);
-    });
-    }
-
 // Get current date and time
 const now = new Date();
 const options = { 
@@ -129,36 +92,28 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
     {
-        templeName: "Accra Ghana Temple",
-        location: "Accra, Ghana",
-        dedicated: "2004, January, 11",
-        area: 17500,
-        imageUrl:
-        "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
+      templeName: "Accra Ghana Temple",
+      location: "Accra, Ghana",
+      dedicated: "2004, January, 11",
+      area: 17500,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
     },
     {
-        templeName: "Johannesburg South Africa Temple",
-        location: "Johannesburg, South Africa",
-        dedicated: "1985, August, 24-25",
-        area: 19184,
-        imageUrl:
-        "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22475-main.jpg"
+      templeName: "Bountiful Utah Temple",
+      location: "Bountiful, Utah, United States",
+      dedicated: "1995, January, 8-14",
+      area: 104000,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/bountiful-utah-temple/bountiful-utah-temple-40955-main.jpg"
     },
     {
-        templeName: "Bountiful Utah Temple",
-        location: "Bountiful, Utah, United States",
-        dedicated: "1995, January, 8-14",
-        area: 104000,
-        imageUrl:
-        "https://churchofjesuschristtemples.org/assets/img/temples/bountiful-utah-temple/bountiful-utah-temple-40955-main.jpg"
-    },
-    {
-        templeName: "Freiberg Germany Temple",
-        location: "Freiberg, Germany",
-        dedicated: "1985, June, 28-30",
-        area: 21500,
-        imageUrl:
-        "https://churchofjesuschristtemples.org/assets/img/temples/freiberg-germany-temple/freiberg-germany-temple-16459-main.jpg"
+      templeName: "Freiberg Germany Temple",
+      location: "Freiberg, Germany",
+      dedicated: "1985, June, 28-30",
+      area: 21500,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/freiberg-germany-temple/freiberg-germany-temple-16459-main.jpg"
     },
     {
       templeName: "Frankfurt Germany Temple",
@@ -167,6 +122,14 @@ const temples = [
       area: 32895,
       imageUrl:
       "https://churchofjesuschristtemples.org/assets/img/temples/frankfurt-germany-temple/frankfurt-germany-temple-38924-main.jpg"
+    },
+    {
+      templeName: "Johannesburg South Africa Temple",
+      location: "Johannesburg, South Africa",
+      dedicated: "1985, August, 24-25",
+      area: 19184,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22475-main.jpg"
     },
     ]
 
@@ -181,5 +144,22 @@ const temples = [
         <p>Area: ${temple.area} sq ft</p>
     <img src="${temple.imageUrl}" alt="${temple.templeName}"> 
     `;
+    gridContainer.appendChild(item);
     });
-    
+    function displayTemples(temples) {
+      const templeList = document.getElementById("templeList");
+      templeList.innerHTML = ""; // Clear existing list
+  
+      temples.forEach(temple => {
+        li.textContent = `${temple.templeName} - Dedicated in ${temple.dedicated} - Size: ${temple.area} sq ft`;
+        li.textContent = `${temple.templeName} - Built in ${temple.yearBuilt} - Size: ${temple.area} sq ft`;
+        templeList.appendChild(li);
+      });
+      }
+  
+      document.getElementById('someButton').addEventListener('click', function() {
+        // Example of changing the href when a button is clicked
+        document.getElementById('homeLink').href = '/new-home';
+    });  
+  
+  
