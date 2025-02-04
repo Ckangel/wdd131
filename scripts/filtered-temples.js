@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', function() {
             navList.querySelectorAll('li a').forEach(item => item.classList.remove('active'));
             this.classList.add('active');
-        });
+          });
     });
 });
 
@@ -133,33 +133,86 @@ const temples = [
     },
     ]
 
+    // Filter temples by area
     const gridContainer = document.querySelector('.grid-container');
-    temples.forEach(temple => {
-    const item = document.createElement('div');
-    item.className = 'grid-item';
-    item.innerHTML = `
-        <h3>${temple.templeName}</h3>
-        <p>Location: ${temple.location}</p>
-        <p>Dedicated: ${temple.dedicated}</p>
-        <p>Area: ${temple.area} sq ft</p>
-    <img src="${temple.imageUrl}" alt="${temple.templeName}"> 
-    `;
-    gridContainer.appendChild(item);
+    temples.forEach((temple, index) => {
+        const item = document.createElement('div');
+        item.className = 'grid-item';
+        item.innerHTML = `
+            <h3>${temple.templeName}</h3>
+            <p>Location: ${temple.location}</p>
+            <p>Dedicated: ${temple.dedicated}</p>
+            <p>Area: ${temple.area} sq ft</p>
+            <img src="${temple.imageUrl}" alt="${temple.templeName}" class="temple-image" style="border: 5px solid hsl(${index * 30}, 70%, 80%);">
+            <img.setAttribute("loading", "lazy");
+        `;
+        gridContainer.appendChild(item);
     });
+    
     function displayTemples(temples) {
-      const templeList = document.getElementById("templeList");
-      templeList.innerHTML = ""; // Clear existing list
-  
-      temples.forEach(temple => {
-        li.textContent = `${temple.templeName} - Dedicated in ${temple.dedicated} - Size: ${temple.area} sq ft`;
-        li.textContent = `${temple.templeName} - Built in ${temple.yearBuilt} - Size: ${temple.area} sq ft`;
-        templeList.appendChild(li);
-      });
-      }
-  
-      document.getElementById('someButton').addEventListener('click', function() {
+        const templeList = document.getElementById("templeList");
+        templeList.innerHTML = ""; // Clear existing list
+      
+        temples.forEach(temple => {
+            const li = document.createElement('li');
+            li.textContent = `${temple.templeName} - Dedicated in ${temple.dedicated} - Size: ${temple.area} sq ft`;
+            templeList.appendChild(li);
+        });
+    }
+    // Filter temples by area
+
+    document.getElementById('someButton').addEventListener('click', function() {
         // Example of changing the href when a button is clicked
         document.getElementById('homeLink').href = '/new-home';
-    });  
-  
-  
+    });
+
+    
+// Function to display temples based on a filter
+function displayTemples(filter) {
+  const photoAlbum = document.getElementById('photoAlbum');
+  photoAlbum.innerHTML = ''; // Clear current cards
+
+  const filteredTemples = temples.filter(temple => {
+      const year = new Date(temple.dedicated).getFullYear();
+      switch (filter) {
+          case 'old':
+              return year < 1900;
+          case 'new':
+              return year > 2000;
+          case 'large':
+              return temple.area > 90000;
+          case 'small':
+              return temple.area < 10000;
+          default:
+              return true; // Show all for 'home'
+      }
+  });
+
+  filteredTemples.forEach(temple => {
+      const figure = document.createElement('figure');
+      const img = document.createElement('img');
+      img.src = temple.imageUrl;
+      img.alt = temple.templeName;
+      img.loading = 'lazy';
+      
+      const figcaption = document.createElement('figcaption');
+      figcaption.textContent = temple.templeName;
+
+      figure.appendChild(img);
+      figure.appendChild(figcaption);
+      photoAlbum.appendChild(figure);
+  });
+  }
+
+  // Event listeners for filters
+  document.querySelectorAll('.filter').forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default anchor behavior
+      const filter = this.getAttribute('data-filter');
+      displayTemples(filter); // Call display function with selected filter
+  });
+  });
+
+  // Initial display of all temples
+  displayTemples('all');
+

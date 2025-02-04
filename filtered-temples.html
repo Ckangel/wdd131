@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="styles/filtered-temples-large.css"> 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
@@ -19,14 +20,14 @@
         <input type="checkbox" class="menu-toggle" id="menuToggle">
         <label for="menuToggle" class="hamburger">&#9776;</label>
         <ul class="nav-list">
-            <li><a href="#" onclick="filterTemples('all')">Home</a></li>
-            <li><a href="#" onclick="filterTemples('old')">Old</a></li>
-            <li><a href="#" onclick="filterTemples('new')">New</a></li>
-            <li><a href="#" onclick="filterTemples('large')">Large</a></li>
-            <li><a href="#" onclick="filterTemples('small')">Small</a></li>
+            <li><a href="#" class="filter" data-filter="all">Home</a></li>
+            <li><a href="#" class="filter" data-filter="old">Old</a></li>
+            <li><a href="#" class="filter" data-filter="new">New</a></li>
+            <li><a href="#" class="filter" data-filter="large">Large</a></li>
+            <li><a href="#" class="filter" data-filter="small">Small</a></li>
         </ul>        
     </nav>
-  </header>
+</header> 
 
   <main>
       <section>
@@ -34,7 +35,7 @@
           <div class="grid-container" id="photoAlbum"></div>
       </section>
   </main>
-  
+
   <footer>
     <p>&copy;<span id="year"></span> 💕 Charles Kingsley Ajeigbe 💕 Ghana 💕</p>
     <p id="lastModified">Last Modified: <span id="currentDateTime"></span></p>
