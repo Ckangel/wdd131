@@ -17,7 +17,6 @@ body {
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
-    box-sizing: border-box; ;
 }
 
 /* General styling for header and footer */
@@ -33,27 +32,25 @@ header, footer {
 header nav {
     display: flex;
     flex: 1;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
 }
 
 /* Logo styles */
-
 .logo h1 {
-    margin: 0;
+    margin: 1rem;
     font-size: 1.5rem;
-    position: relative;
+    font-weight: bold;
     float: left;
 }
 
 .nav-links{
     display: flex;
     flex: 1;
-    justify-content: right;
-    width: 100%;
+    justify-content: flex-end; 
     list-style: none;
-    gap: 10px;
+    gap: 5px;
     padding: 0;
     margin: 0;
 }
@@ -118,7 +115,7 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 15px;
   text-align: center;
-  transition: transform 0.3s ease-in-out
+  transition: transform 0.3s ease-in-out;
 }
 
 .res-grid section:hover {
@@ -141,9 +138,9 @@ main {
 @media (max-width: 768px) { 
     .nav-links {
       display: none; 
-      flex-direction: column;  /* Stack links vertically */
+      flex-direction: column;  
       position: absolute;
-      top: 100%;  /* Position below the header */
+      top: 100%;  
       left: 0;
       background-color: rgba(var(--primary-color-rgb),0.95);
       width: 100%;
@@ -170,7 +167,6 @@ main {
   
     .logo h1 {
       font-size: 1.2rem;
-      max-width: 120px; 
     }
   }
 

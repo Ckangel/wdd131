@@ -1,17 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navlinks = document.querySelector('.nav-links');
-    const navLinksList = document.querySelectorAll(".nav-links a");
-    const hamburgerButton = document.getElementById("hamburger");
-    const menu = document.getElementById("menu");
-    const closeButton = document.getElementById("close");
-    const grid = document.querySelector(".res-grid");
-    const titleContainer = document.querySelector("#title-container");
-  
-    // Hamburger Menu Functionality
-    hamburger.addEventListener("click", () => {
-      navlinks.classList.toggle("active");
-      hamburger.classList.toggle("active");
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  const grid = document.querySelector(".res-grid");
+  const titleContainer = document.querySelector("#title-container");
+  const navLinksList = document.querySelectorAll('.nav-links a');
+
+  // Hamburger Menu Functionality
+  hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+  }); 
 
     // Temple Data (Moved outside the event listener for better organization)
   const temples = [
@@ -165,24 +162,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Event Listener for Nav Links
 navLinksList.forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
 
-        // Remove active class from all links
-        navLinksList.forEach(link => link.classList.remove('active'));
+// Remove active class from all links
+navLinksList.forEach(link => link.classList.remove("active"));
 
-        // Add active class to the clicked link
-        this.classList.add('active');
+// Add active class to the clicked link
+this.classList.add("active");
 
-        // Filter temples based on the data-filter attribute
-        const filter = this.getAttribute('data-filter');
-        filterTemples(filter);
+// Filter temples based on the data-filter attribute
+const filter = this.getAttribute("data-filter");
+filterTemples(filter);
 
-        // Close the hamburger menu on smaller screens after a link is clicked
-        if (window.innerWidth <= 768) {
-            navLinks.classList.remove('active');
-        }
-    });
+// Close the hamburger menu on smaller screens after a link is clicked
+if (window.innerWidth <= 768) {
+  navLinks.classList.remove("active");
+}
 });
 
 // Initial Render

@@ -1,52 +1,39 @@
-/* Base styles */
-:root {
-  --primary-color: blueviolet;
-  --secondary-color: #333;
-  --text-color: #333;
-  --background-color: #f4f4f4;
-  --border-color: #ccc;
-  --link-color: blue;
-  --link-color-hover: darkblue;
-  --transition-speed: 0.3s;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  box-sizing: border-box; ;
-}
-
 /* Media Query for larger screens */
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   .logo h1 {
     font-size: 2rem;
-  }
+    }
 
-  .nav-links {
-    gap: 30px; 
-  }
+    .nav-links {
+        display: flex !important; 
+    }
 
-  .nav-links a {
+    .hamburger {
+        display: none !important; /* Ensure it's hidden */
+    }
+
+    .nav-links {
+    gap: 30px;
+    display: flex; 
+    }
+
+    .nav-links a {
     padding: 0.75rem 1.5rem;
     font-size: 1.1rem; 
-  }
+    }
 
-  /* Re-hides the hamburger  */
-  .hamburger {
+    /* Re-hides the hamburger  */
+    .hamburger {
     display: none;
-  }
+    }
 
-  header nav {
-    padding: 1rem 0;
+    header nav {
+      padding: 1rem; 
+    }
   }
-}
 
 /* Media Query for even larger screens */
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   .logo h1 {
     font-size: 2.5rem;
   }
