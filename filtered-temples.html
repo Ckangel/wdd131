@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Course WDD131 - LDS Temples Album - Charles Ajeigbe">
 <meta name="author" content="Charles Ajeigbe">
-<title>LDS Temples Album - Charles K. Ajeigbe</title>
+<title>Temples Album - Charles Ajeigbe</title>
 <link rel="stylesheet" href="styles/filtered-temples.css">  
-<link rel="stylesheet" href="styles/filtered-temples-large.css"> 
+<link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 769px)"> 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -15,30 +15,39 @@
 </head>
 <body>
   <header>
-    <h1>Temples Album</h1>
-    <nav>
-        <input type="checkbox" class="menu-toggle" id="menuToggle">
-        <label for="menuToggle" class="hamburger">&#9776;</label>
-        <ul class="nav-list">
-            <li><a href="#" class="filter" data-filter="all">Home</a></li>
-            <li><a href="#" class="filter" data-filter="old">Old</a></li>
-            <li><a href="#" class="filter" data-filter="new">New</a></li>
-            <li><a href="#" class="filter" data-filter="large">Large</a></li>
-            <li><a href="#" class="filter" data-filter="small">Small</a></li>
-        </ul>        
-    </nav>
-</header> 
+    <div class="logo">
+        <h1>Temple Album</h1>
+        </div>
+        <nav>
+            <button class="hamburger" aria-label="Open Menu">
+              ☰
+            </button>
+            
+            <ul class="nav-links">
+              <li><a href="#" data-filter="home" class="active">Home</a></li>
+              <li><a href="#" data-filter="old">Old</a></li>
+              <li><a href="#" data-filter="new">New</a></li>
+              <li><a href="#" data-filter="large">Large</a></li>
+              <li><a href="#" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <div id="title-container">
 
-  <main>
-      <section>
-          <h2 class="home_title">Home</h2>
-          <div class="grid-container" id="photoAlbum"></div>
-      </section>
+      </div>
+      
+      <div class="res-grid">
+        
+      </div>
   </main>
-
   <footer>
-    <p>&copy;<span id="year"></span> 💕 Charles Kingsley Ajeigbe 💕 Ghana 💕</p>
-    <p id="lastModified">Last Modified: <span id="currentDateTime"></span></p>
+    <div>
+      &copy; <span id="year"></span> 💕 Charles K. Ajeigbe 💕 Temples Photo Album 💕
+    </div>
+    <div>
+      Last Update: <span id="last-modified"></span>
+    </div>
   </footer>
-  </body>
-  </html>     
+</body>
+</html>
