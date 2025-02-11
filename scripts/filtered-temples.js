@@ -95,22 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
       imageUrl:
         "https://churchofjesuschristtemples.org/assets/img/temples/freiberg-germany-temple/freiberg-germany-temple-16459-main.jpg"
     },
-    {
-      templeName: "Frankfurt Germany Temple",
-      location: "Frankfurt, Germany",
-      dedicated: "1987, August, 28-30",
-      area: 32895,
-      imageUrl:
-        "https://churchofjesuschristtemples.org/assets/img/temples/frankfurt-germany-temple/frankfurt-germany-temple-38924-main.jpg"
-    },
-    {
-      templeName: "Johannesburg South Africa Temple",
-      location: "Johannesburg, South Africa",
-      dedicated: "1985, August, 24-25",
-      area: 19184,
-      imageUrl:
-        "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22475-main.jpg"
-    },
   ];
 
   // Function to Create Temple Cards
