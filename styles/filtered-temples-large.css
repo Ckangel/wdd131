@@ -1,5 +1,5 @@
 /* Media Query for larger screens */
-@media (min-width: 769px) {
+@media (min-width: 600px) {
   .logo h1 {
     font-size: 2rem;
   }
@@ -24,7 +24,7 @@
 }
 
 /* Media Query for even larger screens */
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   .logo h1 {
     font-size: 2.5rem;
   }
