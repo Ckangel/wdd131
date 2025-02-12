@@ -47,6 +47,10 @@
     font-size: 1.2rem;
   }
 
+  .nav-links.active {
+    display: flex !important; 
+  }
+
   header {
     padding: 1.5rem 0; 
   }

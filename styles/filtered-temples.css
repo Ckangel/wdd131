@@ -140,17 +140,19 @@ main {
       display: none; 
       flex-direction: column;  
       position: absolute;
-      top: 100%;  
-      left: 0;
+      top: 0;  
+      right: 0;
       background-color: rgba(var(--primary-color-rgb),0.95);
-      width: 100%;
-      text-align: center;
-      padding: 1rem 0;
+      width: auto;
+      text-align: right;
+      padding: 1rem;
+      margin-top: 0;
       z-index: 10;
+      border-radius: 0 0 0 10px;
     }
   
     .nav-links.active {  
-      display: flex;
+      display: flex !important;
     }
 
     .nav-links li {
