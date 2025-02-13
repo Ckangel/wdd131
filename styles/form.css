@@ -10,7 +10,7 @@ header,
 footer {
     background-color: lightgrey;
     color: black;
-    padding: 10px;
+    padding: 0.5em;
     text-align: center;
 }
 
@@ -20,6 +20,8 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-sizing: border-box;
+    background-color: lightslategrey;
 }
 
 .product-review-form {
@@ -27,7 +29,7 @@ main {
     max-width: 600px;
     margin: 20px auto;
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -38,6 +40,11 @@ main {
     border: none;
 }
 
+.product-review-form .features-label {
+    display: flex; 
+    align-items: center;
+}
+      
 .product-review-form legend {
     font-size: 1.5em;
     font-weight: bold;
@@ -64,7 +71,7 @@ main {
 .form-group textarea,
 .form-group select {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
@@ -75,7 +82,11 @@ main {
 .form-group input[type="radio"],
 .form-group input[type="checkbox"] {
     margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    
 }
+
 /* Overall form styling (adjust as needed) */
 .product-review-form {
     width: 100%; 
@@ -92,7 +103,7 @@ main {
     margin-bottom: 5px;
     color: #333;
     display: flex;
-    align-items: left;
+    align-items: stretch;
     flex-direction: column;
     justify-content: left; 
   }
@@ -101,23 +112,24 @@ main {
   .product-review-form .stars,
   .product-review-form .features {
     margin-bottom: 15px;
-    display: flex; /* Use flexbox for horizontal arrangement */
-    justify-content: center; /* Center the stars horizontally */
-    align-items: center; /* Vertically align items */
-    flex-direction: row; /* Ensure stars are in a row */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: row; 
+    padding-bottom: 0.2rem;
   }
   
   /* Style for each individual star rating */
   .product-review-form .star-rating {
-    display: inline-block; /* Display stars inline */
-    margin: 0 5px; /* Space between stars */
+    display: inline-block; 
+    margin: 0 10px; 
   }
   
   /* Unhide the radio button */
-  .product-review-form .star-rating input[type="radio"] {
+  .product-review-form, .star-rating input[type="radio"] {
     position: relative;
-    width: 10;
     height: auto;
+    margin: 0 10px;
   }
   
   /* Style the star label (the visual star) */
@@ -170,12 +182,12 @@ main {
 }
 
 .product-review-form select:required:valid {
-    border-bottom: 3px solid gray;
+    border-bottom: 0.5px solid gray;
 }
 
 footer {
-    font-size: 0.9em;
-    margin-top: 20px;
+    font-size:1em;
+    margin-top: 0px;
     color: black;
     font-weight: bold;
 }
