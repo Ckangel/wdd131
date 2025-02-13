@@ -76,18 +76,69 @@ main {
 .form-group input[type="checkbox"] {
     margin-right: 5px;
 }
-
-.product-review-form .stars-label,
-.product-review-form .features-label {
+/* Overall form styling (adjust as needed) */
+.product-review-form {
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Labels for the star rating and feature ratings */
+  .product-review-form .stars-label,
+  .product-review-form .features-label {
     margin-bottom: 5px;
     color: #333;
-    display: block;
-}
-
-.product-review-form .stars,
-.product-review-form .features {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: left; 
+  }
+  
+  /* Container for the star rating inputs */
+  .product-review-form .stars,
+  .product-review-form .features {
     margin-bottom: 15px;
-}
+    display: flex; /* Use flexbox for horizontal arrangement */
+    justify-content: center; /* Center the stars horizontally */
+    align-items: center; /* Vertically align items */
+    flex-direction: row; /* Ensure stars are in a row */
+  }
+  
+  /* Style for each individual star rating */
+  .product-review-form .star-rating {
+    display: inline-block; /* Display stars inline */
+    margin: 0 5px; /* Space between stars */
+  }
+  
+  /* Unhide the radio button */
+  .product-review-form .star-rating input[type="radio"] {
+    position: relative;
+    width: 10;
+    height: auto;
+  }
+  
+  /* Style the star label (the visual star) */
+  .product-review-form .star-rating label {
+    cursor: pointer;
+    font-size: 24px; 
+    color: #ccc; 
+    transition: color 0.2s;
+  }
+  
+  /* Style the filled star when hovered */
+  .product-review-form .star-rating label:hover,
+  .product-review-form .star-rating label:hover ~ label {
+    color: orange;
+  }
+  
+  /* Style the filled star when selected */
+  .product-review-form .star-rating input[type="radio"]:checked ~ label {
+    color: orange;
+  }
+  
 
 .product-review-form button[type="submit"] {
     background-color: black;
@@ -125,5 +176,6 @@ main {
 footer {
     font-size: 0.9em;
     margin-top: 20px;
-    color: #666;
+    color: black;
+    font-weight: bold;
 }
