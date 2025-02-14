@@ -1,36 +1,41 @@
-body {
+@media (max-width: 600px) {
+    .product-review-form-container {
+      width: 100%; 
+    }
+  }
+
+  body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     color: #333;
 }
 
-header,
-footer {
+.product-review-header,
+.product-review-footer {
     background-color: lightgrey;
     color: black;
-    padding: 0.5em;
+    font-weight: bold;
     text-align: center;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 1px;
+    padding-top: 0;
 }
 
 main {
     padding: 20px;
-    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     box-sizing: border-box;
-    background-color: lightslategrey;
 }
 
 .product-review-form {
-    width: 90%;
+    width: 100%;
     max-width: 600px;
     margin: 20px auto;
-    background-color: #fff;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -40,30 +45,20 @@ main {
     border: none;
 }
 
-.product-review-form .features-label {
-    display: flex; 
-    align-items: center;
+.product-review-form .features {
+    display: flex;
+    flex-direction: column !important;
 }
-      
+
 .product-review-form legend {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #555;
-    margin-bottom: 20px;
-    display: block;
-    width: 100%;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #ddd;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 1px;
+  margin-top: 5px;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  border-top: 0.5rem;
 }
 
 .form-group input[type="text"],
@@ -79,65 +74,67 @@ main {
     margin-top: 5px;
 }
 
-.form-group input[type="radio"],
 .form-group input[type="checkbox"] {
     margin-right: 5px;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;   
 }
 
-/* Overall form styling (adjust as needed) */
-.product-review-form {
+.form-group {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Overall form styling */
+.product-review-form-container {
     width: 100%; 
     max-width: 600px; 
-    margin: 0 auto; 
-    padding: 20px;
+    padding: 2px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: #fff;
   }
   
-  /* Labels for the star rating and feature ratings */
-  .product-review-form .stars-label,
-  .product-review-form .features-label {
-    margin-bottom: 5px;
+  /* Labels for the star ratings */
+  .product-review-form .stars-label {
     color: #333;
     display: flex;
-    align-items: stretch;
-    flex-direction: column;
-    justify-content: left; 
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
   }
   
   /* Container for the star rating inputs */
-  .product-review-form .stars,
-  .product-review-form .features {
+  .product-review-form .stars {
     margin-bottom: 15px;
     display: flex; 
     justify-content: center; 
     align-items: center; 
     flex-direction: row; 
     padding-bottom: 0.2rem;
+    border-bottom: 1px solid #ddd;
   }
   
   /* Style for each individual star rating */
   .product-review-form .star-rating {
     display: inline-block; 
-    margin: 0 10px; 
+    margin: 0 5px; 
   }
   
   /* Unhide the radio button */
-  .product-review-form, .star-rating input[type="radio"] {
+  .product-review-form .star-rating input[type="radio"] {
     position: relative;
     height: auto;
-    margin: 0 10px;
+    margin: 0 13px;
   }
   
   /* Style the star label (the visual star) */
   .product-review-form .star-rating label {
     cursor: pointer;
     font-size: 24px; 
-    color: #ccc; 
+    color: yellowgreen; 
     transition: color 0.2s;
+    border-left: 1px;
+    padding-left: 1px;
   }
   
   /* Style the filled star when hovered */
@@ -151,22 +148,16 @@ main {
     color: orange;
   }
   
-
-.product-review-form button[type="submit"] {
-    background-color: black;
-    color: white;
-    padding: 12px 20px;
+.product-review-form-submit {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 1.1em;
-    width: 100%;
-    display: block;
-    margin-top: 20px;
-}
-
-.product-review-form button[type="submit"]:hover {
-    background-color: #333;
+    margin-top: 10px;
 }
 
 .product-review-form input:required {
@@ -183,11 +174,4 @@ main {
 
 .product-review-form select:required:valid {
     border-bottom: 0.5px solid gray;
-}
-
-footer {
-    font-size:1em;
-    margin-top: 0px;
-    color: black;
-    font-weight: bold;
 }
