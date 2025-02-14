@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   
       star.addEventListener('click', function() {
-        // Set the selected rating on click
+    
         const rating = this.querySelector('input').value;
         console.log(`Rated: ${rating} stars`); // Or update a hidden field
   
@@ -86,15 +86,13 @@ document.addEventListener('DOMContentLoaded', function() {
         isValid = false;
       }
   
-      // Example: Check if the written review is too long
+      // To check if the written review is too long
       const reviewText = document.getElementById('written-review').value;
-      if (reviewText.length > 500) {
-        alert("Written review must be less than 500 characters.");
+      if (reviewText.length > 100) {
+        alert("Written review must be less than 100 characters.");
         event.preventDefault();
         isValid = false;
       }
-  
-      // Add more validation checks as needed
   
       return isValid; // Only submit if isValid is true
     });

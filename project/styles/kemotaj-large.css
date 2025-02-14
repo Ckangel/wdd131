@@ -1,0 +1,25 @@
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px; 
+    }
+
+    header {
+        padding: 1.5rem 0; 
+    }
+
+    .hero {
+        padding: 3rem; 
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .grid-layout {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Wider grid items */
+    }
+
+    .grid-item {
+        padding: 20px; 
+    }
+}
