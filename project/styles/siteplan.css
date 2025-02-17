@@ -34,13 +34,14 @@ header, footer {
 h1, footer {
     color: #EE4266;
     margin-bottom: 0.5rem;
-    background-color: #f4d35e;
+    background-color: var(--secondary-green);
 }
 
 h2, h3 {
-    color: var (--primary-color);
+    color:#f4d35e;
     margin-bottom: 0.5rem;
     background-color: var (--secondary-green);
+    text-align: center;
 }
 
 p {
@@ -57,6 +58,11 @@ a {
     margin-right: 20px;
     color: var (--secondary-black);
     background-color:  #a8dadc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    
 }
 
 .logo {
