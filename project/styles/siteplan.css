@@ -11,7 +11,7 @@
 
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", Montserrat, sans-serif;
     margin: 0;
     padding: 0;
     background-color: var (--secondary-white);
@@ -49,6 +49,11 @@ h2, h3 {
     background-color: var (--secondary-green);
     text-align: center;
 }
+
+.nav {
+    display: flex;
+    justify-content: center;
+} 
 
 p {
     margin-bottom: 1.25rem;
