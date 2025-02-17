@@ -20,22 +20,22 @@ document.addEventListener('DOMContentLoaded', function() {
         // Clear the form fields
         document.getElementById('name').value = '';
         document.getElementById('email').value = '';
-});
+    });
 
-// Footer Functionality
-const yearElement = document.getElementById("year");
-const currentYear = new Date().getFullYear();
-if (yearElement) {
-  yearElement.textContent = currentYear;
-} else {
-  console.log("Element with ID 'year' not found.");
-}
+    // Footer Functionality
+    const yearElement = document.getElementById("year");
+    const currentYear = new Date().getFullYear();
+    if (yearElement) {
+    yearElement.textContent = currentYear;
+    } else {
+    console.log("Element with ID 'year' not found.");
+    }
 
-const lastModifiedElement = document.getElementById("last-modified");
-if (lastModifiedElement) {
-  const lastModifiedDate = document.lastModified;
-  lastModifiedElement.textContent = lastModifiedDate;
-} else {
-  console.log("Element with ID 'last-modified' not found.");
-}
-});
+    const lastModifiedElement = document.getElementById("last-modified");
+    if (lastModifiedElement) {
+    const lastModifiedDate = document.lastModified;
+    lastModifiedElement.textContent = lastModifiedDate;
+    } else {
+    console.log("Element with ID 'last-modified' not found.");
+    }
+  });
