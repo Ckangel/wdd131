@@ -1,12 +1,13 @@
 :root {
     /* Colors */
-    --primary-red: #e63946;
+    --primary-color: #EE4266;
     --primary-yellow: #f4d35e;
+    --secondary-color: #540D6E;
     --secondary-orange: #ff7f50;
     --secondary-white: #f1faee;
     --secondary-black: #1d3557;
     --secondary-green: #a8dadc;
-
+}
 
 /* General Styles */
 body {
@@ -69,7 +70,7 @@ main {
 
 .hero img {
     width: 100%;
-    max-width: 500px; /* Adjust as needed */
+    max-width: 500px;
     border-radius: 5px;
     margin-top: 1rem;
 }

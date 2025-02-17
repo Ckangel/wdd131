@@ -14,13 +14,28 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // You can add more sophisticated email validation here if needed
-
         // Display a thank you message or handle the submission data as needed
         alert('Thank you for signing up, ' + name + '! We\'ll keep you updated at ' + email + '.');
 
-        // Optionally, clear the form fields
+        // Clear the form fields
         document.getElementById('name').value = '';
         document.getElementById('email').value = '';
-    });
+});
+
+// Footer Functionality
+const yearElement = document.getElementById("year");
+const currentYear = new Date().getFullYear();
+if (yearElement) {
+  yearElement.textContent = currentYear;
+} else {
+  console.log("Element with ID 'year' not found.");
+}
+
+const lastModifiedElement = document.getElementById("last-modified");
+if (lastModifiedElement) {
+  const lastModifiedDate = document.lastModified;
+  lastModifiedElement.textContent = lastModifiedDate;
+} else {
+  console.log("Element with ID 'last-modified' not found.");
+}
 });
