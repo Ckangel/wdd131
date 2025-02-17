@@ -28,11 +28,17 @@ header, footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     justify-content: space-around;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    border-style: solid;
+    border-color: var (--secondary-black);
 }
 
-/* Styling for the headings */
+/* Styling for the headings and footer */
 h1, footer {
     color: #EE4266;
+    margin-top: 0;
     margin-bottom: 0.5rem;
     background-color: var(--secondary-green);
 }
@@ -65,15 +71,24 @@ a {
 
 }
 
-.logo {
+.img {
     width: 50px;
     height: 50px;
-    margin-left: 10px;
-    box-sizing: border-box;
-    border: 2px solid var (--secondary-black);
-    border-radius: 50%;
-    position: relative;
-    top: 5px;
-    
+    margin-left: 20px;
+    margin-right: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
+.boxstyle {   
+    justify-content: center;
+    margin-top: 20px;
+    border-style: solid;
+    border-color: var (--secondary-black);
+    box-sizing: border-box;
+    padding: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
