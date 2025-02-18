@@ -12,20 +12,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
-
-    <script src="scripts/form.js" defer></script>
   </head>
 
 <body>  
   <main>
-    <fieldset>
-      <div class="product-review-form-container">
+    <div class="product-review-form-container">
       <div class="product-review-header">
         <h1>Product Review</h1>
       </div>
-      <div>
-      <method method="get" action="review.html" class="product-review-form">
-          
+      <form method="get" action="review.html" class="product-review-form">
+        <fieldset>          
               <legend>Product Information and Review</legend>
               <div class="form-group">
                   <label for="productName">Select a Product*</label>
@@ -36,68 +32,64 @@
                 </div>
 
                 <legend>Overall Rating</legend>
+                <div class="stars">
+                  <div class="star-rating">
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label for="star1">*</label>
+                  </div>
+                  <div class="star-rating">
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label for="star2">**</label>
+                  </div>
+                  <div class="star-rating">
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label for="star3">***</label>
+                  </div>
+                  <div class="star-rating">
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label for="star4">****</label>
+                  </div>
+                  <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label for="star5">*****</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="installation">Date of Installation*</label>
+                  <input type="date" id="installation" name="completeDate" required>
+                </div>
+                <legend>Features Found Useful</legend>
+                <div class="form-group"> <span>(Check all that apply)</span></div>
+                <div class="features"> 
+                  <label><input type="checkbox" id="durability" name="productDurability" value="yes">Durability</label>
+                  <label><input type="checkbox" id="ease" name="easeUse" value="yes">Ease of Use</label>
+                  <label><input type="checkbox" id="performance" name="productPerformance" value="yes">Performance</label>
+                  <label><input type="checkbox" id="design" name="productDesign" value="yes">Design</label>
+                </div>
+                <div class="form-group">
+                  <label for="review">Written Review<span>(Optional)</span></label>
+                  <textarea id="review" name="writtenReview" rows="8" placeholder="Share your review"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="name">Your Name <span>(Optional)</span></label>
+                  <input type="text" id="name" name="user_name">
+                </div>
+                <!-- Submit Button -->
+                 <div class="product-review-form-submit">
+                  <button type="submit">Post Review</button>
+                </div>
 
-      <div class="stars">
-      <div class="star-rating">
-        <input type="radio" id="star1" name="rating" value="1" />
-        <label for="star1">*</label>
-      </div>
-      <div class="star-rating">
-        <input type="radio" id="star2" name="rating" value="2" />
-        <label for="star2">**</label>
-      </div>
-      <div class="star-rating">
-        <input type="radio" id="star3" name="rating" value="3" />
-        <label for="star3">***</label>
-      </div>
-      <div class="star-rating">
-        <input type="radio" id="star4" name="rating" value="4" />
-        <label for="star4">****</label>
-      </div>
-      <div class="star-rating">
-        <input type="radio" id="star5" name="rating" value="5" />
-        <label for="star5">*****</label>
-      </div>
-    </div>
-   
-    <legend>Date of Installation*</legend>
-    <div class="form-group">
-      
-      <input type="date" id="installation" name="completeDate" required>
-  </div>
+                </fieldset>
 
-  <legend>Features Found Useful</legend>
-  <div class="form-group"> <span>(Check all that apply)</span></div>
-      <div class="features"> 
-          <label><input type="checkbox" id="durability" name="productDurability" value="yes">Durability</label>
-          <label><input type="checkbox" id="ease" name="easeUse" value="yes">Ease of Use</label>
-          <label><input type="checkbox" id="performance" name="productPerformance" value="yes">Performance</label>
-          <label><input type="checkbox" id="design" name="productDesign" value="yes">Design</label>
-      </div>
-      </method>
-  
-  <div class="form-group">
-      <label for="review">Written Review <span>(Optional)</span></label>
-      <textarea id="review" name="writtenReview" rows="8" placeholder="Share your review"></textarea>
-  </div>
-
-  <div class="form-group">
-      <label for="name">Your Name <span>(Optional)</span></label>
-      <input type="text" id="name" name="user_name">
-  </div>
-
-  <div class="product-review-form-submit">
-    <button type="submit">Post Review</button>
-  </div>
-
-      <div class="product-review-footer">
-        <p>&copy;<span id="currentYear"></span> 💕 Charles Ajeigbe 💕 Tema Ghana</p>
-        Last Modified: <span id="lastModified"></span>
-        </div>
-      </div>
-      </div>
-    </fieldset>
-  </main>
-</body>
-</html>
+                <!-- Footer -->
+                 <div class="product-review-footer">
+                  <p>&copy;<span id="currentYear"></span> 💕 Charles Ajeigbe 💕 Tema Ghana</p>
+                  Last Modified: <span id="lastModified"></span>
+                </div>
+              </form>
+            </div>
+          </main>
+          <script src="scripts/form.js" defer></script>
+        </body>
+        </html>
 <!-- End of form.html -->
