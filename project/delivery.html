@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A sample HTML document">
-    <meta name="author" content="Your Name">
-    <title>Sample HTML Page</title>
+    <meta name="description" content="Kemotaj Restaurant Checkout">
+    <meta name="author" content="Charles K.Ajeigbe">
+    <title>Checkout Page</title>
     <!-- Link to external CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/siteplan-large.css">
     <!-- Link to external fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,49 +17,104 @@
 <body>
     <!-- Main content of the page -->
     <header>
-        <h1>Welcome to My Website</h1>
-        <p>This is a sample webpage created with HTML.</p>
-    </header>
+        <div class="logo">
+            <img src="images/kemotaj-logo.png" alt="Kemotaj Restaurant" width="200">
+        </div>
+            <nav>
+            <button class="hamburger" aria-label="Open Menu">
+              ☰
+            </button>
 
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu-order.html">Our Menu</a></li>
+                <li><a href="delivery.html" class="active">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <section>
-            <h2>About This Page</h2>
-            <p>This section provides information about the purpose of this page.</p>
+            <h2>Order Fulfilment</h2>
+            <p>Make payment here for accelerated Meal delivery</p>
         </section>
+        <section class="checkout-page">
+            <h2>Checkout</h2>
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <ul id="checkout-cart-items" class="cart-items-list">
+                <!-- Cart items will be dynamically added here -->
+                </ul>
 
-        <section>
-            <h2>Features</h2>
-            <ul>
-                <li>Clean and semantic HTML structure</li>
-                <li>Responsive design with meta viewport</li>
-                <li>Linked external CSS and fonts</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Contact</h2>
-            <form action="/submit" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5"></textarea>
-
-                <button type="submit">Submit</button>
+            <div class="cart-total">
+                Total: $<span id="checkout-cart-total">0.00</span>
+            </div>
+            </div>
+            <form id="checkout-form">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="contact-name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="contact-email" name="email" required>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Delivery Address</legend>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+            
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+            
+                    <label for="postal-code">Postal Code:</label>
+                    <input type="text" id="postal-code" name="postal-code" required>
+                </fieldset>         
+                <fieldset>
+                    <legend>Payment Information</legend>
+                    <div class="payment-options">
+                    <label>
+                    <input type="radio" name="payment-method" value="card" required>
+                    Card Payment
+                </label>
+                
+                <label>
+                    <input type="radio" name="payment-method" value="bank">
+                    Bank Transfer
+                </label>
+                <div id="bank-transfer-details" class="bank-transfer-details" style="display:none;">
+                    <p>Make your payment directly into our bank account.</p>
+                    <p><strong>Bank:</strong> CAL Bank GH</p>
+                    <p><strong>Account Name:</strong> Kemotaj Restaurants</p>
+                    <p><strong>Account Number:</strong> 112233445500</p>
+                </div>
+                
+                <label>
+                    <input type="radio" name="payment-method" value="mobile-money">
+                    Mobile Money
+                </label>
+                <div id="mobile-money-details" class="mobile-money-details" style="display:none;">
+                    <p>Pay with Mobile Money for faster delivery.</p>
+                    <p><strong>Network:</strong> MTN</p>
+                    <p><strong>Number:</strong> +233559169117</p>
+                </div>
+                </div>
+                </fieldset>
+                
+                <button type="submit">Place Order</button>
             </form>
-        </section>
-    </main>
 
-    <!-- Footer -->
+        </section>
+        </main>
+    
+        <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Kemotaj Ventures. All rights reserved.</p>
         <p>Last updated: Monday, February 17, 2025</p>
     </footer>
 
     <!-- Link to external JavaScript -->
-    <script src="script.js"></script>
+    <script src="scripts/siteplan.js"></script>
 </body>
 </html>

@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A sample HTML document">
+    <meta name="description" content="Kemotaj Restaurant Menu and Order">
     <meta name="author" content="Your Name">
-    <title>Sample HTML Page</title>
+    <title>Menu and Orders</title>
     <!-- Link to external CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/siteplan-large.css">
     <!-- Link to external fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,50 +16,53 @@
 </head>
 <body>
     <!-- Main content of the page -->
+    
     <header>
-        <h1>Welcome to My Website</h1>
-        <p>This is a sample webpage created with HTML.</p>
-    </header>
+        <img src="images/kemotaj-logo.png" alt="Kemotaj Restaurant" width="100">
+        <nav>
+            <button class="hamburger" aria-label="Open Menu">
+              ☰
+            </button>
 
-    <main>
-        <section>
-            <h2>About This Page</h2>
-            <p>This section provides information about the purpose of this page.</p>
-        </section>
-
-        <section>
-            <h2>Features</h2>
-            <ul>
-                <li>Clean and semantic HTML structure</li>
-                <li>Responsive design with meta viewport</li>
-                <li>Linked external CSS and fonts</li>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu-order.html" class="active">Our Menu</a></li>
+                <li><a href="delivery.html">Checkout</a></li>
             </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="menu-display">
+            <h2>Our Menu</h2>
+            <div class="menu-grid grid-3x2">
+                <div class="menu-item">
+                    <img src="food1.jpg" alt="Jollof Rice">
+                    <p>Jollof Rice - $5.99</p>
+                    <button class="add-to-cart" data-name="Jollof Rice" data-price="5.99">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="food2.jpg" alt="Banku & Tilapia">
+                    <p>Banku and Tilapia - $7.99</p>
+                    <button class="add-to-cart" data-name="Banku & Tilapia" data-price="7.99">Add to Cart</button>
+                </div>
+            </div>
         </section>
-
-        <section>
-            <h2>Contact</h2>
-            <form action="/submit" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5"></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
+        
+        <section class="shopping-cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button id="checkout-btn">Proceed to Checkout</button>
         </section>
-    </main>
-
+    </main>       
+       
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Kemotaj Restaurants, All rights reserved.</p>
         <p>Last updated: Monday, February 17, 2025</p>
     </footer>
 
     <!-- Link to external JavaScript -->
-    <script src="script.js"></script>
+    <script src="scripts/siteplan.js"></script>
 </body>
 </html>
