@@ -96,9 +96,8 @@ main {
   max-width: 1200px;
 }
 
-.title-container h2 {
-  font-size: 1.5em; 
-  color: var(--primary-color)
+.titled-container {
+  margin: 20px 0;
 }
 
 /* Responsive Grid Layout */

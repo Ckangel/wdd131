@@ -22,6 +22,7 @@ body {
 /* Header Styles */
 header, footer {
     color: var (--secondary-white);
+    background-color: #f4d35e;
     padding: 1rem 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -36,14 +37,14 @@ header, footer {
 
 /* Styling for the headings and footer */
 h1, footer {
-    color: #EE4266;
+    color: #f4d35e;
     margin-top: 0;
     margin-bottom: 0.5rem;
-    background-color: var(--secondary-green);
+    background-color: var (--secondary-green);
 }
 
 h2, h3 {
-    color:#f4d35e;
+    color: var(--secondary-black);
     margin-bottom: 0.5rem;
     background-color: var (--secondary-green);
     text-align: center;
@@ -74,19 +75,16 @@ a {
     text-align: center;
 }
 
-.logo {
+.header logo {
     float: left;
-    width: auto;
-    height: auto;
-    margin-left: 20px;
-    position: relative;
+    margin-left: 10px;
     top: 0;
     left: 0;
 }
 
 .boxstyle {   
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 20px
     border-style: solid;
     border-color: var (--secondary-black);
     box-sizing: border-box;
@@ -166,8 +164,9 @@ header nav {
 }
 
 .container {
-    display: inline-flexbox;
+    display: flex;
     flex-direction: row;
+    flex: 1;
 }
 
 /* Main Content Styling */
