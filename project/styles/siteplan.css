@@ -75,16 +75,10 @@ a {
     text-align: center;
 }
 
-.header logo {
-    float: left;
-    margin-left: 10px;
-    top: 0;
-    left: 0;
-}
-
 .boxstyle {   
     justify-content: center;
-    margin-top: 20px
+    margin-top: 20px;
+    border: 1px solid var (--secondary-black);
     border-style: solid;
     border-color: var (--secondary-black);
     box-sizing: border-box;
@@ -92,12 +86,20 @@ a {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+}
+
+.boxstyle img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 /* General styling for header and footer */
 header, footer {
     padding: 1rem 0;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: #fff;
     align-items: center;
     text-align: center;
@@ -113,9 +115,9 @@ header nav {
 }
 
 /* Logo styles */
-.logo h1 {
-    margin: 1rem;
-    font-size: 1.5rem;
+.logo {
+    margin: 0;
+    font-size: 1rem;
     font-weight: bold;
     float: left;
 }
@@ -163,10 +165,17 @@ header nav {
     display: none;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
 /* Main Content Styling */
@@ -177,9 +186,10 @@ main {
   max-width: 1200px;
 }
 
-.title-container h2 {
-  font-size: 1.5em; 
-  color: var(--primary-color)
+.menu-item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 20px;
 }
 
 /* Responsive Grid Layout */
@@ -278,53 +288,67 @@ footer div {
 }
 
 .payment-options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-    }
-  
-    .payment-options label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    }
-  
-    .bank-transfer-details,
-    .mobile-money-details {
-    margin-top: 10px;
-    padding-left: 20px;
-    }
-  
-    /* Styles for the cart summary */
-    .cart-summary {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    }
-  
-    .cart-summary h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    }
-  
-    .cart-items-list {
-    list-style: none;
-    padding: 0;
-    }
-  
-    .cart-items-list li {
-    padding: 5px 0;
-    border-bottom: 1px dotted #eee;
-    }
-  
-    .cart-items-list li:last-child {
-    border-bottom: none;
-    }
-  
-    .cart-total {
-    font-weight: bold;
-    text-align: right;
-    margin-top: 10px;
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  }
+ 
+  .payment-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  }
+ 
+  .bank-transfer-details,
+  .mobile-money-details {
+  margin-top: 10px;
+  padding-left: 20px;
+  }
+ 
+  /* Styles for the cart summary */
+  .cart-summary {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  }
+ 
+  .cart-summary h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  }
+ 
+  .cart-items-list {
+  list-style: none;
+  padding: 0;
+  }
+
+  .cart-items-list li {
+  padding: 5px 0;
+  border-bottom: 1px dotted #eee;
+  }
+ 
+  .cart-items-list li:last-child {
+  border-bottom: none;
+  }
+ 
+  .cart-total {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 10px;
+  }
+ 
+  /* Styles for the order confirmation */
+  .order-confirmation {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  }
+ 
+  .order-confirmation h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  }
