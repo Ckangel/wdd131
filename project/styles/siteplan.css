@@ -20,7 +20,7 @@ body {
 }
 
 /* Header Styles */
-header, footer {
+header {
     color: var (--secondary-white);
     background-color: #f4d35e;
     padding: 1rem 0;
@@ -36,7 +36,7 @@ header, footer {
 }
 
 /* Styling for the headings and footer */
-h1, footer {
+h1 {
     color: #f4d35e;
     margin-top: 0;
     margin-bottom: 0.5rem;
@@ -101,8 +101,6 @@ header, footer {
     padding: 1rem 0;
     background-color: var(--secondary-color);
     color: #fff;
-    align-items: center;
-    text-align: center;
 }
 
 /* Header navigation styles */
@@ -261,6 +259,25 @@ main {
     .logo h1 {
       font-size: 1.2rem;
     }
+
+    .boxstyle {
+      width: 100%;
+    }
+
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .footer-left, .footer-right {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .sociallinks {
+      display: flex;
+      justify-content: center;
+    } 
   }
 
 /* Accessibility styles */
@@ -270,24 +287,45 @@ a:focus {
 }
   
 /* Footer styles */
-footer {
+.footer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    justify-content: left;
     align-items: center;
-    text-align: center;
     flex-wrap: wrap;
-    padding: 10px;
-    margin-top: 10px;
-}
-
-footer div {
-    margin: 5px 0;
+    padding: 20px;
     visibility: visible;
     display: block;
+    color: var(--secondary-white);
 }
 
-.payment-options {
+.footer-left {
+    width: 50%;
+    text-align: left;
+}
+
+.footer-right {
+    width: 50%;
+    text-align: right;
+}
+
+.company-info img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.sociallinks a {
+    color: var(--secondary-white);
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+  .payment-options {
   display: flex;
   flex-direction: column;
   gap: 10px;
